@@ -1,0 +1,17 @@
+{
+  "name": "Title Extractor",
+  "description": "Adds a button to text input fields and on clicking that button it will alert the title of the website",
+  "version": "1.0",
+  "manifest_version": 3,
+
+  "permissions": ["storage", "declarativeContent", "activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
